@@ -48,5 +48,6 @@
     </tr>
     @endforeach
     </table>
+    <br>
 </div>
 @endsection
