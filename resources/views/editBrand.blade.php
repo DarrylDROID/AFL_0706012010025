@@ -33,20 +33,11 @@
                         <input type="text" class="form-control" id="headquarters" name="headquarters" value="{{ $brands->headquarters }}" required>
                     </div>
                     <br>
-                    @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="{{ URL::previous() }}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Go Back</a>
+                    <button type="submit" class="btn btn-primary me-1">Submit</button>
+                    <a href="{{ URL('/brand') }}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Go Back</a>
                 </form>
             </div>
         </div>
     </body>
-    
+
 @endsection

@@ -42,6 +42,13 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'brand_code' => 'required',
+            'brand_name' => 'required',
+            'founder' => 'required',
+            'date_found' => 'required',
+            'headquarters' => 'required'
+        ]);
 
         Brand::create([
             'brand_code' => $request->brand_code,
@@ -86,8 +93,7 @@ class BrandController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-    
+    {    
         $brands = Brand::findOrFail($id);
         $brands->update([
             'brand_code' => $request->brand_code,

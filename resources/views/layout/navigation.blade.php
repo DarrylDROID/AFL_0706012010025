@@ -27,25 +27,3 @@
         </div>
     </div>
 </nav>
-
-{{-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav nav-pills">
-          <li class="nav-item" style="margin:5px">
-            <a class="nav-link {{ $active_welcome ?? '' }}" href="/">Home</a>
-          </li>
-          <li class="nav-item" style="margin:5px ">
-            <a class="nav-link {{ $active_car ?? ''}}" href="/car">Car</a>
-          </li>
-          <li class="nav-item" style ="margin:5px">
-            <a class="nav-link {{ $active_brand ?? '' }}" href="/brand">Brand</a>
-          </li>
-          <li class="nav-item" style="margin:5px">
-            <a class="nav-link {{ $active_contact ?? ''}}" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav>
-  --}}

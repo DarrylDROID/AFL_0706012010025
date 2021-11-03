@@ -40,8 +40,8 @@
                     </ul>
                 </div>
                 @endif
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="{{ URL::previous() }}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Go Back</a>
+                <button type="submit" class="btn btn-primary mb-5 me-1">Submit</button>
+                <a href="{{ URL('/brand') }}" class="btn btn-danger mb-5"> <i class="fas fa-arrow-left"></i> Go Back</a>
             </form>
         </div>
     </div>

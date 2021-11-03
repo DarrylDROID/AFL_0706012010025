@@ -58,14 +58,8 @@
                         <input type="text" class="form-control" id="price" name="price" value="{{ $cars->price }}" required>
                     </div>
                     <br>
-                    {{-- <div class="form-group">
-                        <strong>Image:</strong>
-                        <input type="file" name="image" class="form-control" placeholder="image">
-                        <img src="/image/{{ $car->image }}" width="300px">
-                    </div> --}}
-                    {{-- <br> --}}
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="{{ URL::previous() }}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Go Back</a>
+                    <button type="submit" class="btn btn-primary me-1">Submit</button>
+                    <a href="{{ URL('/car') }}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Go Back</a>
                 </form>
             </div>
         </div>

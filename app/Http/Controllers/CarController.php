@@ -46,23 +46,14 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'code' => 'required',
-        //     'car' => 'required',
-        //     'type' => 'required',
-        //     'merk' => 'required',
-        //     'engine' => 'required',
-        //     // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-
-        // $input = $request->all();
-  
-        // if ($image = $request->file('image')) {
-        //     $destinationPath = 'image/';
-        //     $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-        //     $image->move($destinationPath, $profileImage);
-        //     $input['image'] = "$profileImage";
-        // }
+        $this->validate($request,[
+            'code' => 'required',
+            'car' => 'required',
+            'type' => 'required',
+            'merk' => 'required',
+            'engine' => 'required',
+            'price' => 'required'
+        ]);
         
         $code = Str::upper(Str::substr($request->car, 0, 3));
 
@@ -73,7 +64,6 @@ class CarController extends Controller
             'merk' => $request->merk,
             'engine' => $request->engine,
             'price' => $request->price
-            // 'image' => $request->image 
         ]);
         return redirect(route('car.index'));
     }
@@ -113,26 +103,6 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $request->validate([
-        //     'code' => 'required',
-        //     'car' => 'required',
-        //     'type' => 'required',
-        //     'merk' => 'required',
-        //     'engine' => 'required',
-        //     // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-
-        // $input = $request->all();
-  
-        // if ($image = $request->file('image')) {
-        //     $destinationPath = 'image/';
-        //     $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-        //     $image->move($destinationPath, $profileImage);
-        //     $input['image'] = "$profileImage";
-        // }else{
-        //     unset($input['image']);
-        // }
-
         $code = Str::upper(Str::substr($request->car, 0, 3));
         $cars = Car::findOrFail($id);
         $cars->update([
@@ -142,7 +112,6 @@ class CarController extends Controller
             'merk' => $request->merk,
             'engine' => $request->engine,
             'price' => $request->price
-            // 'image' => $request->image
         ]);
       
         return redirect(route('car.index'));

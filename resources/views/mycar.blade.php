@@ -15,7 +15,6 @@
             <th> BRAND NAME </th>
             <th> ENGINE </th>
             <th> PRICE </th>
-            {{-- <th> IMAGE </th> --}}
             <th class="d-flex justify-content-center"> ACTIONS </th>
         </tr>
 
@@ -33,7 +32,6 @@
     </td>
     <td>{{ $car['engine'] }}</td>
     <td>{{ $car['price'] }}</td>
-    {{-- <td><img src="/image/{{ $car->image }}" width="100px"></td> --}}
     <td class="text-center"> 
     <div class="d-grid d-md-flex justify-content-center">
         <a href="{{ route('car.show', $car->code) }}"><button type="button" class="btn btn-info me-md-2">Show</button></a>
