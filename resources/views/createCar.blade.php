@@ -22,6 +22,7 @@
                         <option value="COUPE">COUPE</option>
                         <option value="SPORTS">SPORTS</option>
                         <option value="SUV">SUV</option>
+                        <option value="MUSCLE">MUSCLE</option>
                         <option value="HATCHBACK">HATCHBACK</option>
                         <option value="MINIVAN">MINIVAN</option>
                         <option value="PICKUP">PICKUP</option>
