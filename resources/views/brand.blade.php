@@ -27,7 +27,6 @@
     <td>{{ $brand['founder'] }}</td>
     <td>{{ $brand['date_found'] }}</td>
     <td>{{ $brand['headquarters'] }}</td>
-
     <td> 
         <div class="d-grid d-md-flex justify-content-center">
             <a href="{{ route('brand.show', $brand->brand_code) }}"><button type="button" class="btn btn-info me-md-2">Show</button></a>
@@ -42,5 +41,6 @@
     </tr>
     @endforeach
     </table>
+    <br>
 </div>
 @endsection
