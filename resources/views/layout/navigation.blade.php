@@ -10,18 +10,18 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav nav-pills mr-auto">
                 <li class="nav-item" style="margin:5px">
                     <a class="nav-link {{ $active_welcome ?? '' }}" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item" style="margin:5px">
-                    <a class="nav-link {{ $active_car ?? '' }}" href="/car">Car</a>
+                    <a class="nav-link {{ $active_cars ?? '' }}" href="/car">Car</a>
                 </li>
                 <li class="nav-item" style="margin:5px">
-                    <a class="nav-link {{ $active_brand ?? '' }}" href="/brand">Brand</a>
+                    <a class="nav-link {{ $active_brands ?? '' }}" href="/brand">Brand</a>
                 </li>
                 <li class="nav-item" style="margin:5px">
-                    <a class="nav-link {{ $active_contact ?? ''}}" href="/contact">Contact</a>
+                    <a class="nav-link {{ $active_contacts ?? ''}}" href="/contact">Contact</a>
                 </li>
             </ul>
         </div>

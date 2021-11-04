@@ -18,16 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', 
     [            
-    "active_welcome" => "active",
-    "active_cars" => "",
-    "active_brands" => "",
-    "active_contact" => ""
-]);
-});
+    "active_welcome" => "active"
+    ]);
+    });
 
 Route::get('/contact', function () {
-    return view('contact');
-});
+    return view('contact',
+    [
+    "active_contacts" => "active"
+    ]);
+    });
 
 Route::resource('car', CarController::class);
 Route::resource('brand', BrandController::class); 

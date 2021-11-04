@@ -15,14 +15,12 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $active_welcome = "";
         $active_brands = "active";
-        $active_cars = "";
-
+   
         $brands = Brand::all();
-
+     
         return view('brand',
-            compact('active_welcome', 'active_brands', 'active_cars', 'brands'));
+            compact('active_brands',  'brands'));
     }
 
     /**

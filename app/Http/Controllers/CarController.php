@@ -17,15 +17,13 @@ class CarController extends Controller
      */
     public function index()
     {
-        $active_welcome = "";
         $active_cars = "active";
-        $active_brands = "";
 
         $cars = Car::all();
         $brands = Brand::all();
 
         return view('mycar', 
-            compact('active_welcome', 'active_cars', 'active_brands', 'cars', 'brands'));
+            compact('active_cars', 'cars', 'brands'));
     }
 
     /**
