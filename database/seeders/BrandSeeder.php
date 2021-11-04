@@ -21,6 +21,7 @@ class BrandSeeder extends Seeder
             'founder'=>'Yoshihiro Nakata',
             'date_found'=>'12 April 1971',
             'headquarters'=>'Jakarta',
+            'image'=>'brand_image/toyota_logo.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now() 
         ]);
@@ -31,6 +32,7 @@ class BrandSeeder extends Seeder
             'founder'=>'Toshiro Mibe',
             'date_found'=>'24 September 1948',
             'headquarters'=>'Minato, Tokyo, Japan',
+            'image'=>'brand_image/honda_logo.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now() 
         ]);
@@ -41,6 +43,7 @@ class BrandSeeder extends Seeder
             'founder'=>'Jujiro Matsuda',
             'date_found'=>'30 January 1920',
             'headquarters'=>'Fuchu, Hiroshima, Japan',
+            'image'=>'brand_image/mazda_logo.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now() 
         ]);
@@ -51,6 +54,7 @@ class BrandSeeder extends Seeder
             'founder'=>'Saneyasu Oka',
             'date_found'=>'1 March 1951',
             'headquarters'=>'Ikeda, Osaka, Japan',
+            'image'=>'brand_image/daihatsu_logo.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now() 
         ]);
@@ -61,6 +65,7 @@ class BrandSeeder extends Seeder
             'founder'=>'Karl Rapp',
             'date_found'=>'7 March 1916',
             'headquarters'=>'Munchen, Germany',
+            'image'=>'brand_image/bmw_logo.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now() 
         ]);
@@ -71,6 +76,7 @@ class BrandSeeder extends Seeder
             'founder'=>'Henry Ford',
             'date_found'=>'16 June 1903',
             'headquarters'=>'Dearborn, Michigan, America',
+            'image'=>'brand_image/ford_logo.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now() 
         ]);

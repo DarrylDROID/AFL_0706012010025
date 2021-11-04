@@ -17,7 +17,7 @@ class CreateCarTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('car');
-            // $table->string('image');
+            $table->string('image');
             $table->string('engine');
             $table->string('price');
             $table->timestamps();

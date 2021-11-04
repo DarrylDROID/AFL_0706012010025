@@ -46,14 +46,6 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'code' => 'required',
-            'car' => 'required',
-            'type' => 'required',
-            'merk' => 'required',
-            'engine' => 'required',
-            'price' => 'required'
-        ]);
         
         $code = Str::upper(Str::substr($request->car, 0, 3));
 
@@ -63,7 +55,8 @@ class CarController extends Controller
             'type' => $request->type,
             'merk' => $request->merk,
             'engine' => $request->engine,
-            'price' => $request->price
+            'price' => $request->price,
+            'image' => $request->file('image')->store('car_image')
         ]);
         return redirect(route('car.index'));
     }

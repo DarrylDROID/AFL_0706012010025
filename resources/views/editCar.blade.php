@@ -17,7 +17,7 @@
                     <br>
                     <div class="form-group">
                         <label>Type:</label>
-                        <select name="type" class="custom-select">
+                        <select name="type" class="custom-select" required>
                             <option hidden value="{{ $cars->type }}">
                                 {{ $cars->type }}
                             </option>
@@ -35,8 +35,8 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <label for="merk">Brand:</label>
-                        <select name="merk" class="custom-select">
+                        <label for="merk">Brand Name:</label>
+                        <select name="merk" class="custom-select" required>
                             @foreach ($brands as $brand)
                                 @if ($brand['brand_code'] == $cars['price'])
                                     <option value="{{ $brand['brand_code'] }}" selected>{{ $brand['brand_name'] }}

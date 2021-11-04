@@ -19,6 +19,7 @@ class CreateBrandTable extends Migration
             $table->string('founder');
             $table->string('date_found');
             $table->string('headquarters');
+            $table->string('image');
             $table->timestamps();
         });
 

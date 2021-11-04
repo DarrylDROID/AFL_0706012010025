@@ -25,6 +25,7 @@
                         <th scope="col">Type</th>
                         <th scope="col">Engine</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Image</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,6 +39,7 @@
                             <td>{{ $car['type'] }}</td>
                             <td>{{ $car['engine'] }}</td>
                             <td>{{ $car['price'] }}</td>
+                            <td><img src="{{ asset('storage/'. $car['image'] ) }}" width="100" alt=""></td>
                         </tr>
                     @endforeach
                 </tbody>

@@ -10,7 +10,7 @@ class Car extends Model
     use HasFactory;
     
     protected $table = "car";
-    protected $fillable = ['code', 'car', 'type', 'merk', 'engine', 'price'];
+    protected $fillable = ['code', 'car', 'type', 'merk', 'engine', 'price', 'image'];
 
     public function brand() 
     {

@@ -42,20 +42,13 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'brand_code' => 'required',
-            'brand_name' => 'required',
-            'founder' => 'required',
-            'date_found' => 'required',
-            'headquarters' => 'required'
-        ]);
-
         Brand::create([
             'brand_code' => $request->brand_code,
             'brand_name' => $request->brand_name,
             'founder' => $request->founder,
             'date_found' => $request->date_found,
-            'headquarters' => $request->headquarters
+            'headquarters' => $request->headquarters,
+            'image' => $request->file('image')->store('brand_image')
         ]);
         return redirect(route('brand.index'));
     }

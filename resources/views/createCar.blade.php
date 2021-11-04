@@ -12,12 +12,12 @@
                 @csrf
                 <div class="form-group">
                     <label for="car">Car Name:</label>
-                    <input type="text" class="form-control" id="car" name="car">
+                    <input type="text" class="form-control" id="car" name="car" required>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="type">Type:</label>
-                    <select name="type" class="custom-select">
+                    <select name="type" class="custom-select" required>
                         <option value="SEDAN">SEDAN</option>
                         <option value="COUPE">COUPE</option>
                         <option value="SPORTS">SPORTS</option>
@@ -33,8 +33,8 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="merk">Brand:</label>
-                    <select name="merk" class="custom-select">
+                    <label for="merk">Brand Name:</label>
+                    <select name="merk" class="custom-select" required>
                         <option value="" selected disabled hidden>Choose here</option>
                             @foreach ($brands as $brand)
                             <option value="{{ $brand['brand_code'] }}">{{ $brand['brand_name'] }}</option>
@@ -44,23 +44,19 @@
                 <br>
                 <div class="form-group">
                     <label for="engine">Engine:</label>
-                    <input type="text" class="form-control" id="engine" name="engine">
+                    <input type="text" class="form-control" id="engine" name="engine" required>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="price">Price:</label>
-                    <input type="text" class="form-control" id="price" name="price">
+                    <input type="text" class="form-control" id="price" name="price" required>
                 </div>
                 <br>
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" class="form-control" id="image" name="image" required>
                 </div>
-                @endif
+                <br>
                 <button type="submit" class="btn btn-primary mb-5 me-1">Submit</button>
                 <a href="{{ URL('/car') }}" class="btn btn-danger mb-5"> <i class="fas fa-arrow-left"></i> Go Back</a>
             </form>

@@ -12,7 +12,7 @@ class Brand extends Model
     protected $table ="brand";
     protected $keyType ='string';
     protected $primaryKey = 'brand_code';
-    protected $fillable = ['brand_code', 'brand_name', 'founder', 'date_found', 'headquarters'];
+    protected $fillable = ['brand_code', 'brand_name', 'founder', 'date_found', 'headquarters', 'image'];
 
     public function cars()
     {
