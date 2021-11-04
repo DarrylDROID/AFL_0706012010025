@@ -38,7 +38,7 @@
                         <label for="merk">Brand Name:</label>
                         <select name="merk" class="custom-select" required>
                             @foreach ($brands as $brand)
-                                @if ($brand['brand_code'] == $cars['price'])
+                                @if ($brand['brand_code'] == $cars['merk'])
                                     <option value="{{ $brand['brand_code'] }}" selected>{{ $brand['brand_name'] }}
                                     </option>
                                 @else
