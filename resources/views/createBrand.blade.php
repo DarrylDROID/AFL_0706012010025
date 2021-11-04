@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <form action="{{ route('brand.store') }}" method="post">
+            <form action="{{ route('brand.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                   <label for="brand_code">Brand Code:</label>

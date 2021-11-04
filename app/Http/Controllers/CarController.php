@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class CarController extends Controller
@@ -98,15 +99,29 @@ class CarController extends Controller
     {
         $code = Str::upper(Str::substr($request->car, 0, 3));
         $cars = Car::findOrFail($id);
-        $cars->update([
-            'code' => $code,
-            'car' => $request->car,
-            'type' => $request->type,
-            'merk' => $request->merk,
-            'engine' => $request->engine,
-            'price' => $request->price
-        ]);
-      
+        $img = $request->file('image');
+        if($img){
+            Storage::delete($request->oldImage);
+            $cars->update([
+                'code' => $code,
+                'car' => $request->car,
+                'type' => $request->type,
+                'merk' => $request->merk,
+                'engine' => $request->engine,
+                'price' => $request->price,
+                'image' => $img->store('car_image')
+            ]);
+        } else {
+            $cars->update([
+                'code' => $code,
+                'car' => $request->car,
+                'type' => $request->type,
+                'merk' => $request->merk,
+                'engine' => $request->engine,
+                'price' => $request->price
+            ]);
+        }
+
         return redirect(route('car.index'));
     }
 
@@ -119,6 +134,7 @@ class CarController extends Controller
     public function destroy($id)
     {
         $cars = Car::findOrFail($id);
+        Storage::delete($cars->image);
         $cars->delete();
         return redirect(route('car.index'));
     }

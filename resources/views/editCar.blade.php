@@ -58,6 +58,12 @@
                         <input type="text" class="form-control" id="price" name="price" value="{{ $cars->price }}" required>
                     </div>
                     <br>
+                    <div class="form-group">
+                        <label for="image">Image:</label>
+                        <input type="hidden" name="oldImage" value="{{ $cars->image }}">
+                        <input type="file" class="form-control" id="image" name="image">
+                    </div>
+                    <br>
                     <button type="submit" class="btn btn-primary me-1">Submit</button>
                     <a href="{{ URL('/car') }}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Go Back</a>
                 </form>

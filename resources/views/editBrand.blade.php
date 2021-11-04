@@ -9,7 +9,7 @@
 <body>
         <div class="row">
             <div class="col">
-                <form action="{{ route('brand.update', $brands->brand_code) }}" method="post">
+                <form action="{{ route('brand.update', $brands->brand_code) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="_method" value="PATCH">
                     <div class="form-group">
@@ -31,6 +31,11 @@
                     <div class="form-group">
                         <label for="description">Headquarters:</label>
                         <input type="text" class="form-control" id="headquarters" name="headquarters" value="{{ $brands->headquarters }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image:</label>
+                        <input type="hidden" name="oldImage" value="{{ $brands->image }}">
+                        <input type="file" class="form-control" id="image" name="image">
                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary me-1">Submit</button>

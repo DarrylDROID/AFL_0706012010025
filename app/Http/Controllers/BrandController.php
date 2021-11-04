@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
@@ -88,13 +89,27 @@ class BrandController extends Controller
     public function update(Request $request, $id)
     {    
         $brands = Brand::findOrFail($id);
-        $brands->update([
-            'brand_code' => $request->brand_code,
-            'brand_name' => $request->brand_name,
-            'founder' => $request->founder,
-            'date_found' => $request->date_found,
-            'headquarters' => $request->headquarters
-        ]);
+        $img = $request->file('image');
+        if($img){
+            Storage::delete($request->oldImage);
+            $brands->update([
+                'brand_code' => $request->brand_code,
+                'brand_name' => $request->brand_name,
+                'founder' => $request->founder,
+                'date_found' => $request->date_found,
+                'headquarters' => $request->headquarters,
+                'image' => $img->store('brand_image')
+            ]);
+        } else {
+            $brands->update([
+                'brand_code' => $request->brand_code,
+                'brand_name' => $request->brand_name,
+                'founder' => $request->founder,
+                'date_found' => $request->date_found,
+                'headquarters' => $request->headquarters
+            ]);
+        }
+ 
         return redirect(route('brand.index'));
     }
 
@@ -107,6 +122,7 @@ class BrandController extends Controller
     public function destroy($id)
     {
         $brands = Brand::findOrFail($id);
+        Storage::delete($brands->image);
         $brands->delete();
         return redirect(route('brand.index'));
     }
