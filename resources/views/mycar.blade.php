@@ -5,7 +5,7 @@
 @section('main_content')
    
     <div class="container">
-    <h1>Car</h1>
+    <h1 class="neonText">Car</h1>
     <table class="table table-striped table-dark table-hover">
         <tr>
             <th> NO </th>
