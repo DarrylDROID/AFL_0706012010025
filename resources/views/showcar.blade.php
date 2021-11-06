@@ -13,6 +13,6 @@
         <p><b>Brand Name : </b>{{$cars['merk']}}</p>
         <p><b>Engine : </b>{{$cars['engine']}}</p>
         <p><b>Price : </b>{{$cars['price']}}</p>
-        <p><b>Image : </b><img src="{{ asset('storage/'. $cars['image'] ) }}" width="100" alt=""></p>
+        <p><b>Image : </b><br><img src="{{ asset('storage/'. $cars['image'] ) }}" class="rounded-circle" width="300" alt=""></p>
     </div>
 @endsection

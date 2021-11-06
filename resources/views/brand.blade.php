@@ -29,7 +29,7 @@
     <td>{{ $brand['date_found'] }}</td>
     <td>{{ $brand['headquarters'] }}</td>
     <td>
-        <img src="{{ asset('storage/'. $brand['image'] ) }}" width="50" alt="">
+        <img src="{{ asset('storage/'. $brand['image'] ) }}" width="75" alt="">
     </td>
     <td> 
         <div class="d-grid d-md-flex justify-content-center">
