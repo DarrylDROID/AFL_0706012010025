@@ -16,9 +16,9 @@
                         <label>Car Name:</label>
                         <input type="text" class="form-control" name="car" value="{{ $cars->car }}" required>
                     </div>
-                    <br>
                     <div class="form-group">
                         <label>Type:</label>
+                        <br>
                         <select name="type" class="custom-select" required>
                             <option hidden value="{{ $cars->type }}">
                                 {{ $cars->type }}
@@ -35,9 +35,9 @@
                             <option value="CROSSOVER">CROSSOVER</option>
                         </select>
                     </div>
-                    <br>
                     <div class="form-group">
                         <label for="merk">Brand Name:</label>
+                        <br>
                         <select name="merk" class="custom-select" required>
                             @foreach ($brands as $brand)
                                 @if ($brand['brand_code'] == $cars['merk'])
@@ -49,17 +49,14 @@
                             @endforeach
                         </select>
                     </div>
-                    <br>
                     <div class="form-group">
                         <label for="engine">Engine:</label>
                         <input type="text" class="form-control" id="engine" name="engine" value="{{ $cars->engine }}" required>
                     </div>
-                    <br>
                     <div class="form-group">
                         <label for="price">Price:</label>
                         <input type="text" class="form-control" id="price" name="price" value="{{ $cars->price }}" required>
                     </div>
-                    <br>
                     <div class="form-group">
                         <label for="image">Image:</label>
                         <input type="hidden" name="oldImage" value="{{ $cars->image }}">
