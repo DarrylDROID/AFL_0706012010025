@@ -6,7 +6,7 @@
 
 @section('main_content')
 
-<body>
+<div class="container text-light">
         <div class="row">
             <div class="col">
                 <form action="{{ route('brand.update', $brands->brand_code) }}" method="post" enctype="multipart/form-data">
@@ -43,6 +43,5 @@
                 </form>
             </div>
         </div>
-    </body>
-
+    </div>
 @endsection

@@ -5,7 +5,8 @@
 @section('pagetitle', 'Create Brand')
 
 @section('main_content')
-<div class="container">
+
+<div class="container text-light">
     <div class="row">
         <div class="col">
             <form action="{{ route('brand.store') }}" method="post" enctype="multipart/form-data">

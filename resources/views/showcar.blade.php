@@ -5,14 +5,14 @@
 @section('pagetitle','Detail Car')
 
 @section('main_content')
-    <div class="mt-4 p-5 bg-secondary text-white rounded">
+    <div class="mt-4 p-5 bgshow text-light">
         <a href="{{ URL::previous() }}" class="btn btn-warning"> <i class="fas fa-arrow-left"></i> Go Back</a>
         <h1>{{$cars['car']}}</h1>
-        <h5><b>Car Name : </b>{{ $cars['car'] }}</h5>
-        <h5><b>Type : </b>{{ $cars['type'] }}</h5>
-        <h5><b>Brand Name : </b>{{$cars['merk']}}</h5>
-        <h5><b>Engine : </b>{{$cars['engine']}}</h5>
-        <h5><b>Price : </b>{{$cars['price']}}</h5>
-        <h5><b>Image : </b><img src="{{ asset('storage/'. $cars['image'] ) }}" width="100" alt=""></h5>
+        <p><b>Car Name : </b>{{ $cars['car'] }}</p>
+        <p><b>Type : </b>{{ $cars['type'] }}</p>
+        <p><b>Brand Name : </b>{{$cars['merk']}}</p>
+        <p><b>Engine : </b>{{$cars['engine']}}</p>
+        <p><b>Price : </b>{{$cars['price']}}</p>
+        <p><b>Image : </b><img src="{{ asset('storage/'. $cars['image'] ) }}" width="100" alt=""></p>
     </div>
 @endsection

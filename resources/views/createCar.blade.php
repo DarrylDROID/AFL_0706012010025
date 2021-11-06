@@ -6,6 +6,7 @@
 
 @section('main_content')
 
+<div class="container text-light">
     <div class="row">
         <div class="col">
             <form action="{{ route('car.store') }}" method="post" enctype="multipart/form-data">
@@ -14,9 +15,9 @@
                     <label for="car">Car Name:</label>
                     <input type="text" class="form-control" id="car" name="car" required>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="type">Type:</label>
+                    <br>
                     <select name="type" class="custom-select" required>
                         <option value="SEDAN">SEDAN</option>
                         <option value="COUPE">COUPE</option>
@@ -31,9 +32,9 @@
                         <option value="CROSSOVER">CROSSOVER</option>
                     </select>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="merk">Brand Name:</label>
+                    <br>
                     <select name="merk" class="custom-select" required>
                         <option value="" selected disabled hidden>Choose here</option>
                             @foreach ($brands as $brand)
@@ -41,17 +42,14 @@
                             @endforeach
                     </select>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="engine">Engine:</label>
                     <input type="text" class="form-control" id="engine" name="engine" required>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="price">Price:</label>
                     <input type="text" class="form-control" id="price" name="price" required>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="image">Image:</label>
                     <input type="file" class="form-control" id="image" name="image" required>
@@ -62,4 +60,5 @@
             </form>
         </div>
     </div>
+</div>
 @endsection

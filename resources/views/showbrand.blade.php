@@ -5,7 +5,7 @@
 @section('pagetitle','Detail Brand')
 
 @section('main_content')
-    <div class="mt-4 p-5 bg-secondary text-white rounded">
+    <div class="mt-4 p-5 bgshow text-light">
         <a href="{{ URL::previous() }}" class="btn btn-warning"> <i class="fas fa-arrow-left"></i> Go Back</a>
         <h1>{{$brands['brand_name']}}</h1>
         <p><b>Brand Code : </b>{{ $brands['brand_code'] }}</p>
@@ -14,9 +14,9 @@
         <p><b>Date Found : </b>{{$brands['date_found']}}</p>
         <p><b>Headquarters : </b>{{$brands['headquarters']}}</p>
 
-            <b>List Car</b>
+            <h3><b>List Car</b></h3>
 
-            <table class="table">
+            <table class="table table-striped table-dark table-hover">
                 <thead>
                     <tr>
                         <th scope="col">No</th>

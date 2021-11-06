@@ -5,6 +5,8 @@
 @section('pagetitle', 'Edit Car')
 
 @section('main_content')
+
+<div class="container text-light">
         <div class="row">
             <div class="col">
                 <form action="{{ route('car.update', $cars->id) }}" method="post" enctype="multipart/form-data">
@@ -69,5 +71,5 @@
                 </form>
             </div>
         </div>
-
+    </div>
 @endsection
