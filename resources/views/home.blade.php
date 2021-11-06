@@ -42,7 +42,7 @@
                         }    
                         } 
                     </style>
-                  <a href="/car" class="link-light"><h1 class="neonText">Order Here!</h1></a>
+                  <a href="/car" style="text-decoration: none" class="link-light"><h1 class="neonText">Order Here!</h1></a>
                 </div>
               </div>
 @endsection 
