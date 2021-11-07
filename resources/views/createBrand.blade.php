@@ -36,7 +36,7 @@
                     <input type="file" class="form-control" id="image" name="image" required>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary mb-5 me-1">Submit</button>
+                <button type="submit" class="btn btn-primary mb-5 me-1"><i class="fa-solid fa-check me-1"></i>Submit</button>
                 <a href="{{ URL('/brand') }}" class="btn btn-danger mb-5"> <i class="fas fa-arrow-left"></i> Go Back</a>
             </form>
         </div>

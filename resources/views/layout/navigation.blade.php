@@ -7,16 +7,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav nav-pills mr-auto">
                 <li class="nav-item" style="margin:5px">
-                    <a class="nav-link {{ $active_welcome ?? '' }}" aria-current="page" href="/">Home</a>
+                    <a class="nav-link {{ $active_welcome ?? '' }}" aria-current="page" href="/">Home<i class="fa-solid fa-house fa-fade ms-1"></i></a>
                 </li>
                 <li class="nav-item" style="margin:5px">
-                    <a class="nav-link {{ $active_cars ?? '' }}" href="/car">Car</a>
+                    <a class="nav-link {{ $active_cars ?? '' }}" href="/car">Car<i class="fa-solid fa-car fa-fade ms-1"></i></a>
                 </li>
                 <li class="nav-item" style="margin:5px">
-                    <a class="nav-link {{ $active_brands ?? '' }}" href="/brand">Brand</a>
+                    <a class="nav-link {{ $active_brands ?? '' }}" href="/brand">Brand<i class="fa-solid fa-copyright fa-fade ms-1"></i></a>
                 </li>
                 <li class="nav-item" style="margin:5px">
-                    <a class="nav-link {{ $active_contacts ?? ''}}" href="/contact">Contact</a>
+                    <a class="nav-link {{ $active_contacts ?? ''}}" href="/contact">Contact<i class="fa-solid fa-user fa-fade ms-1"></i></a>
                 </li>
             </ul>
         </div>
