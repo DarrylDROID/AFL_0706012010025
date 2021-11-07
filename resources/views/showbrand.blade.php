@@ -6,15 +6,14 @@
 
 @section('main_content')
     <div class="mt-4 p-5 bgshow text-light">
-        <a href="{{ URL::previous() }}" class="btn btn-warning"> <i class="fas fa-arrow-left"></i> Go Back</a>
-        <h1>{{$brands['brand_name']}}</h1>
-        <p><b>Brand Code : </b>{{ $brands['brand_code'] }}</p>
-        <p><b>Brand Name : </b>{{ $brands['brand_name'] }}</p>
-        <p><b>Founder : </b>{{$brands['founder']}}</p>
-        <p><b>Date Found : </b>{{$brands['date_found']}}</p>
-        <p><b>Headquarters : </b>{{$brands['headquarters']}}</p>
+        <a href="{{ URL::previous() }}" class="btn btn-warning mb-3"> <i class="fas fa-arrow-left"></i> Go Back</a>
+        <h5><b>Brand Code : </b>{{ $brands['brand_code'] }}</h5>
+        <h5><b>Brand Name : </b>{{ $brands['brand_name'] }}</h5>
+        <h5><b>Founder : </b>{{$brands['founder']}}</h5>
+        <h5><b>Date Found : </b>{{$brands['date_found']}}</h5>
+        <h5><b>Headquarters : </b>{{$brands['headquarters']}}</h5>
 
-            <h3><b>List Car</b></h3>
+            <h3 class="mt-3"><b>List Car</b></h3>
 
             <table class="table table-striped table-dark table-hover">
                 <thead>
