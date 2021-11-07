@@ -5,7 +5,7 @@
 @section('main_content')
 <div class="container text-dark text-center">
   <h1 class="neonText">Contact</h1>
-    <div class="card rounded" style="width:400px; margin:auto;">
+    <div class="card rounded mb-5" style="width:400px; margin:auto;">
         <img class="card-img-top img-fluid img-thumbnail img-responsive rounded" src="http://127.0.0.1:8000/darryl.jpg" alt="Card image">
         <div class="card-body">
         <h4 class="card-title">Oey Darryl Valencio Wijaya</h4>
