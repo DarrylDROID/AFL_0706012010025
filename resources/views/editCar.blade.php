@@ -13,6 +13,10 @@
                     @csrf
                     <input type="hidden" name="_method" value="PATCH">
                     <div class="form-group">
+                        <label>Code:</label>
+                        <input type="text" class="form-control" name="code" value="{{ $cars->code }}" required>
+                    </div>
+                    <div class="form-group">
                         <label>Car Name:</label>
                         <input type="text" class="form-control" name="car" value="{{ $cars->car }}" required>
                     </div>

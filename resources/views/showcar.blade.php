@@ -12,6 +12,6 @@
         <h5><b><i class="fa-light fa-id-card fa-xl me-2"></i>Brand Name : </b>{{$cars['merk']}}</h5>
         <h5><b><i class="fa-light fa-engine fa-xl me-2"></i>Engine : </b>{{$cars['engine']}}</h5>
         <h5><b><i class="fa-light fa-dollar fa-xl me-2"></i>Price : </b>{{$cars['price']}}</h5>
-        <h5><b><i class="fa-light fa-image fa-xl me-2"></i>Image : </b><br><img src="{{ asset('storage/'. $cars['image'] ) }}" class="rounded-circle" width="350" alt="carimage"></h5>
+        <h5><b><i class="fa-light fa-image fa-xl me-2"></i>Image : </b><br><img src="{{ asset('storage/'. $cars['image'] ) }}" width="350" alt="carimage"></h5>
     </div>
 @endsection

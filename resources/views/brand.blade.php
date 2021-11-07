@@ -14,7 +14,6 @@
             <th> FOUNDER <i class="fa-solid fa-person fa-fade ms-1"></i></th>
             <th> DATE FOUND <i class="fa-solid fa-calendar fa-fade ms-1"></i></th>
             <th> HEADQUARTERS <i class="fa-solid fa-building fa-fade ms-1"></i></th>
-            <th> IMAGE <i class="fa-solid fa-image fa-fade ms-1"></i></th>
             <th class="d-flex align-items-center justify-content-center"> ACTIONS <i class="fa-solid fa-circle-exclamation fa-fade ms-1"></i></th>
         </tr>
 
@@ -28,9 +27,6 @@
     <td>{{ $brand['founder'] }}</td>
     <td>{{ $brand['date_found'] }}</td>
     <td>{{ $brand['headquarters'] }}</td>
-    <td>
-        <img src="{{ asset('storage/'. $brand['image'] ) }}" width="75" alt="">
-    </td>
     <td> 
         <div class="d-grid d-md-flex justify-content-center">
             <a href="{{ route('brand.show', $brand->brand_code) }}"><button type="button" class="btn btn-info me-md-2">Show<i class="fa-duotone fa-car fa-flash ms-1"></i></button></a>

@@ -15,7 +15,6 @@
             <th> BRAND NAME <i class="fa-solid fa-id-card fa-fade ms-1"></i></th>
             <th> ENGINE <i class="fa-solid fa-engine fa-fade ms-1"></i></th>
             <th> PRICE <i class="fa-solid fa-dollar fa-fade ms-1"></i></th>
-            <th> IMAGE <i class="fa-solid fa-image fa-fade ms-1"></i></th>
             <th class="d-flex align-items-center justify-content-center"> ACTIONS <i class="fa-solid fa-circle-exclamation fa-fade ms-1"></i></th>
         </tr>
 
@@ -33,9 +32,6 @@
     </td>
     <td>{{ $car['engine'] }}</td>
     <td>{{ $car['price'] }}</td>
-    <td>
-        <img src="{{ asset('storage/'. $car['image'] ) }}" width="100" alt="">
-    </td>
     <td class="text-center"> 
     <div class="d-grid d-md-flex justify-content-center">
         <a href="{{ route('car.show', $car->code) }}"><button type="button" class="btn btn-info me-md-2">Show<i class="fa-duotone fa-car fa-flash ms-1"></i></button></a>

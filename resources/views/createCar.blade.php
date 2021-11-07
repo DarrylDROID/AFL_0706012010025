@@ -12,6 +12,10 @@
             <form action="{{ route('car.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
+                    <label for="code">Code :</label>
+                    <input type="text" class="form-control" id="code" name="code" required>
+                </div>
+                <div class="form-group">
                     <label for="car">Car Name:</label>
                     <input type="text" class="form-control" id="car" name="car" required>
                 </div>

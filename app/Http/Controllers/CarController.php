@@ -45,11 +45,9 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $code = Str::upper(Str::substr($request->car, 0, 3));
 
         Car::create([
-            'code' => $code,
+            'code' => $request->code,
             'car' => $request->car,
             'type' => $request->type,
             'merk' => $request->merk,
@@ -95,13 +93,12 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $code = Str::upper(Str::substr($request->car, 0, 3));
         $cars = Car::findOrFail($id);
         $img = $request->file('image');
         if($img){
             Storage::delete($request->oldImage);
             $cars->update([
-                'code' => $code,
+                'code' => $request->code,
                 'car' => $request->car,
                 'type' => $request->type,
                 'merk' => $request->merk,
@@ -111,7 +108,7 @@ class CarController extends Controller
             ]);
         } else {
             $cars->update([
-                'code' => $code,
+                'code' => $request->code,
                 'car' => $request->car,
                 'type' => $request->type,
                 'merk' => $request->merk,

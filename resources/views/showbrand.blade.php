@@ -39,7 +39,7 @@
                             <td>{{ $car['type'] }}</td>
                             <td>{{ $car['engine'] }}</td>
                             <td>{{ $car['price'] }}</td>
-                            <td><img src="{{ asset('storage/'. $car['image'] ) }}" width="100" alt=""></td>
+                            <td><img src="{{ asset('storage/'. $car['image'] ) }}" width="100" alt="carimage"></td>
                         </tr>
                     @endforeach
                 </tbody>
